@@ -81,9 +81,9 @@ Location:
 
 <?php
 
-   include('CommonMethods.php');
-   $debug = false;
-   $COMMON = new Common($debug); // common methods
+//   include('CommonMethods.php');
+//   $debug = false;
+//   $COMMON = new Common($debug); // common methods
 
    $sql = "SELECT * FROM `issueReport`";
 //$sql = "SELECT COUNT(`id`) FROM `issueReport`";
