@@ -71,7 +71,7 @@ Issue:
      <td>id</td>
      <td>name</td>
      <td>phone</td>
-     <td>locaiton</td>
+     <td>location</td>
      <td>issue</td>
    </tr>
 
