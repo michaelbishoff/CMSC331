@@ -17,7 +17,7 @@ Location:
     <option value="" />
 <?php
     include('CommonMethods.php');
-    $debug = true;
+    $debug = false;
     $COMMON = new Common($debug); // common methods
     
     $sql = "SELECT `building_name` FROM `buildings`";
@@ -78,7 +78,7 @@ Location:
      <td>locaiton</td>
      <td>issue</td>
    </tr>
-<!--
+
 <?php
 
    include('CommonMethods.php');
@@ -124,7 +124,7 @@ Location:
      echo("</tr>");
    }
 */
-?> -->
+?>
 </table>
 
 
