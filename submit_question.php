@@ -8,11 +8,7 @@
 <form action="handle_submit.php" method="post">
 Customer Name: <input type="text" name="name"><br />
 Customer Phone Number: <input type="text" name="phoneNumber"><br />
-Issue Location: <input type="text" name="location"><br />
-Issue:
-<br />
-
-Location:
+Issue Location:
 <select name="location">
     <option value="" />
 <?php
@@ -32,9 +28,9 @@ Location:
 ?>
 </select>
     
-    
 
-    
+Issue:
+<br />
 <ul>
    Electrical Issues
    <li>
