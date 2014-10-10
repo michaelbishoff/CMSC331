@@ -27,7 +27,7 @@ Issue Location:
     }
 ?>
 </select>
-    
+<br />    
 
 Issue:
 <br />
