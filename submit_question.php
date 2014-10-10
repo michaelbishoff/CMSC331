@@ -11,6 +11,42 @@ Customer Phone Number: <input type="text" name="phoneNumber"><br />
 Issue Location: <input type="text" name="location"><br />
 Issue:
 <br />
+
+Location:
+<select name="location">
+    <option value="" />
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="mercedes">Mercedes</option>
+    <option value="audi">Audi</option>
+</select>
+    
+<?php
+    include('CommonMethods.php');
+    $debug = true;
+    $COMMON = new Common($debug); // common methods
+    
+    $sql = "SELECT `building_name` FROM `buildings`";
+
+    $rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
+
+    echo("<table border='1px'>");
+
+    while ($row = mysql_fetch_row($rs)) {
+        echo("<tr>");
+
+        foreach ($row as $element) {
+            echo("<td>" . $element . "</td>");
+        }
+        
+        echo("</tr>");
+    }
+?>
+    
+    
+    
+
+    
 <ul>
    Electrical Issues
    <li>
@@ -54,7 +90,7 @@ Issue:
      <td>locaiton</td>
      <td>issue</td>
    </tr>
-
+<!--
 <?php
 
    include('CommonMethods.php');
@@ -87,7 +123,7 @@ Issue:
      echo("</tr>");
    }
 */
-?>
+?> -->
 </table>
 
 
