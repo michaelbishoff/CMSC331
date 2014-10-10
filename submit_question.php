@@ -15,12 +15,6 @@ Issue:
 Location:
 <select name="location">
     <option value="" />
-    <option value="volvo">Volvo</option>
-    <option value="saab">Saab</option>
-    <option value="mercedes">Mercedes</option>
-    <option value="audi">Audi</option>
-</select>
-    
 <?php
     include('CommonMethods.php');
     $debug = true;
@@ -30,19 +24,13 @@ Location:
 
     $rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
 
-    echo("<table border='1px'>");
-
     while ($row = mysql_fetch_row($rs)) {
-        echo("<tr>");
-
         foreach ($row as $element) {
-            echo("<td>" . $element . "</td>");
+            echo("<option value='" . $element . "'>" . $element . "</option>");
         }
-        
-        echo("</tr>");
     }
 ?>
-    
+</select>
     
     
 
@@ -101,7 +89,20 @@ Location:
 //$sql = "SELECT COUNT(`id`) FROM `issueReport`";
    $rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
    // row->fetch since just inserting data
-   $size = mysql_fetch_array($rs);
+
+
+    while ($row = mysql_fetch_row($rs)) {
+        echo("<tr>");
+        foreach ($row as $element) {
+            echo("<td>" . $element . "</td>");
+        }
+        echo("</tr>");
+    }
+
+
+
+
+   //$size = mysql_fetch_array($rs);
 
 //   foreach($size as $i){
 //     echo("i = " . $i . "<br />");
